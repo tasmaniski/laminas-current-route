@@ -1,6 +1,6 @@
 {
     "name":              "tasmaniski/zf2-current-route",
-    "description":       "View Helper for reading current route info - Controller, action, module and route name",
+    "description":       "View Helper for reading current route info: Controller, Action, Module name",
     "type":              "library",
     "keywords":          ["zf2", "view", "helper", "route"],
     "homepage":          "https://github.com/tasmaniski",
