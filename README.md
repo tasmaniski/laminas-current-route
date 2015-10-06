@@ -42,7 +42,7 @@ $this->currentRoute()->matchRoute('home');
 ### Real world example
 ```
 <!-- check if user visit admin module link and give it a different style in css -->
-<?php $css_class = $this->currentRoute()->matchModule('admin')?'selected':''; ?>
+<?php $css_class = $this->currentRoute()->matchModule('admin') ? 'selected' : ''; ?>
 <a href="/admin" class="<?php echo $css_class;?>">
     Admin link
 </a>
