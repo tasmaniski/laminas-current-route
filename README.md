@@ -26,17 +26,17 @@ You need to register new module. Add in file **config/application.config.php**:
 # Use
 Use this view helper in your view files(.html) including layout.phtml
 ```
-// get names of current route info
-$this->currentRoute()->getController();
-$this->currentRoute()->getAction();
-$this->currentRoute()->getModule();
-$this->currentRoute()->getRoute();
+// get current route info
+$this->currentRoute()->getController(); // return current controller name
+$this->currentRoute()->getAction();     // return current action name
+$this->currentRoute()->getModule();     // return current module name
+$this->currentRoute()->getRoute();      // return current route name
 
 // or simply check with current info
-$this->currentRoute()->matchController('index');
-$this->currentRoute()->matchAction('index');
-$this->currentRoute()->matchModule('application');
-$this->currentRoute()->matchRoute('home');
+$this->currentRoute()->matchController('index');     // match "index" with current controller name
+$this->currentRoute()->matchAction('index');         // match "index" with current action name
+$this->currentRoute()->matchModule('application');   // match "application" with current module name
+$this->currentRoute()->matchRoute('home');           // match "home" with current route name
 ```
 
 ### Real world example
