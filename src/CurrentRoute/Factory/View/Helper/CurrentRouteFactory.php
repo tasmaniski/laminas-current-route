@@ -19,9 +19,10 @@ class CurrentRouteFactory implements FactoryInterface
         $routeMatch = $serviceLocator->getServiceLocator()->get('Application')->getMvcEvent()->getRouteMatch();
         $controller = $routeMatch->getParam('controller');
         $action     = $routeMatch->getParam('action');
+        $module     = $routeMatch->getParam('__NAMESPACE__');
         $route      = $routeMatch->getMatchedRouteName();
 
-        return new CurrentRoute($controller, $action, $route);
+        return new CurrentRoute($controller, $action, $route, $module);
     }
 
 }

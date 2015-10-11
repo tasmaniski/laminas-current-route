@@ -12,25 +12,27 @@ class CurrentRoute extends AbstractHelper
     private $route;
 
     /**
-     * If $controller has FQCN we use that info for $module and $controller names
+     * If module name is omitted try to found it in controller, otherwise leave it empty - ''
+     * in that case $controller should has FQCN name
      *
      * @param String $controller Current controller name
      * @param String $action Current action name
      * @param String $route Current route name
+     * @param String $module Use __NAMESPACE__  as module name. Can be omitted in routes config - null
      */
-    public function __construct($controller, $action, $route)
+    public function __construct($controller, $action, $route, $module)
     {
-        $controller = strtolower($controller);
+        $controller = explode('\\', strtolower($controller));
+        $module     = explode('\\', strtolower($module));
 
-        if(strpos($controller, '\controller\\') !== false) {
-            list($this->module, $this->controller) = explode('\controller\\', $controller);
-        }else {
-            $this->controller = $controller;
-            $this->module     = '';
+        if($module[0] === '' && count($controller) === 3) {
+            $module[0] = $controller[0];
         }
 
-        $this->action = $action;
-        $this->route  = $route;
+        $this->module     = $module[0];
+        $this->controller = array_pop($controller);
+        $this->action     = $action;
+        $this->route      = $route;
     }
 
     /**
