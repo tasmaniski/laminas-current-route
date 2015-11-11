@@ -12,7 +12,7 @@ class CurrentRoute extends AbstractHelper
     private $route;
 
     /**
-     * If module name is omitted try to found it in controller, otherwise leave it empty - ''
+     * If module name is omitted try to find it in controller, otherwise leave it empty - ''
      * in that case $controller should has FQCN name
      *
      * @param String $controller Current controller name
