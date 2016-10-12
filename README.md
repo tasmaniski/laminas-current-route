@@ -1,4 +1,4 @@
-# ZF2 Current Route Helper
+# Zend Framework Current Route Helper
 View Helper for reading **Controller, Module, Action and Route name** in any view(.phtml) file including layout.phtml
 
 # Install
@@ -8,7 +8,7 @@ Add in you **composer.json** file:
 ```json
 {
     "require": {
-        "tasmaniski/zf2-current-route": "1.0.*"
+        "tasmaniski/zend-current-route": "^2.0"
     }
 }
 ```
@@ -22,6 +22,9 @@ You need to register new module. Add in file **config/application.config.php**:
     'CurrentRoute'
 ),
 ```
+
+*Note: if you want to use it in ZF2 app, add in composer.json version ^1.0*
+
 
 # Use
 Use this view helper in your view files(.html) including layout.phtml
