@@ -1,9 +1,9 @@
 <?php
 
-return array(
-    'view_helpers' => array(
-        'factories' => array(
-            'currentRoute' => '\CurrentRoute\Factory\View\Helper\CurrentRouteFactory'
-        )
-    )
-);
+return [
+    'view_helpers' => [
+        'factories' => [
+            'currentRoute' => CurrentRoute\Factory\View\Helper\CurrentRouteFactory::class
+        ]
+    ]
+];

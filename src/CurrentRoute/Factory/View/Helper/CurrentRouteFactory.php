@@ -2,24 +2,19 @@
 
 namespace CurrentRoute\Factory\View\Helper;
 
-use Zend\ServiceManager\FactoryInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
+use Interop\Container\ContainerInterface;
 use Zend\Mvc\Router\Http\RouteMatch;
-use \CurrentRoute\View\Helper\CurrentRoute;
+use CurrentRoute\View\Helper\CurrentRoute;
 
-class CurrentRouteFactory implements FactoryInterface
+class CurrentRouteFactory
 {
-    /**
-     * @param ServiceLocatorInterface $serviceLocator
-     *
-     * @return CurrentRoute
-     */
-    public function createService(ServiceLocatorInterface $serviceLocator)
+
+    public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
     {
-        $routeMatch = $serviceLocator->getServiceLocator()->get('Application')->getMvcEvent()->getRouteMatch();
+        $routeMatch = $container->get('Application')->getMvcEvent()->getRouteMatch();
         $controller = $action = $route = $module = '';
 
-        if($routeMatch) {
+        if($routeMatch){
             $controller = $routeMatch->getParam('controller');
             $action     = $routeMatch->getParam('action');
             $module     = $routeMatch->getParam('__NAMESPACE__');
