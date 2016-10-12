@@ -1,7 +1,7 @@
 # Zend Framework Current Route Helper
 View Helper for reading **Controller, Module, Action and Route name** in any view(.phtml) file including layout.phtml
 
-New version is here! CUrrent version support Zend Framework 3
+New version is here! Current version support Zend Framework 3
 
 # Install
 
