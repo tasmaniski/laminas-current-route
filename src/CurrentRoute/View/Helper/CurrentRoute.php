@@ -30,9 +30,32 @@ class CurrentRoute extends AbstractHelper
         }
 
         $this->module     = $module[0];
-        $this->controller = array_pop($controller);
-        $this->action     = $action;
+        $this->controller = $this->removeControllerActionSuffix(array_pop($controller));
+        $this->action     = $this->removeControllerActionSuffix($action);
         $this->route      = $route;
+    }
+    
+    /**
+     * @param $name
+     * @return string $name
+     * remove xxxAction and xxxController suffix from names
+     */
+    private function removeControllerActionSuffix($name)
+    {
+        
+        if (strpos($name,'controller') !== false )
+        {
+            $name = substr($name,0, strpos($name,'controller') );
+        }
+
+        if (strpos($name,'action') !== false )
+        {
+            $name = substr($name,0, strpos($name,'action') );
+
+        }
+
+        return $name;
+
     }
 
     /**
@@ -110,6 +133,8 @@ class CurrentRoute extends AbstractHelper
     {
         return $this->route === $route;
     }
+    
+    
 
 
 }
