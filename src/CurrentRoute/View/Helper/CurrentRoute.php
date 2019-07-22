@@ -30,7 +30,7 @@ class CurrentRoute extends AbstractHelper
         }
 
         $this->module     = $module[0];
-        $this->controller = array_pop($controller);
+        $this->controller = str_replace('controller', '', array_pop($controller));
         $this->action     = $action;
         $this->route      = $route;
     }
