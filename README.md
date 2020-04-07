@@ -1,7 +1,5 @@
-# Zend Framework Current Route Helper
+# Laminas MVC (Framework) Current Route Helper
 View Helper for reading **Controller, Module, Action and Route name** in any view(.phtml) file including layout.phtml
-
-New version is here! Current version support Zend Framework 3
 
 # Install
 
@@ -10,11 +8,11 @@ Add in you **composer.json** file:
 ```json
 {
     "require": {
-        "tasmaniski/zend-current-route": "^2.0"
+        "tasmaniski/laminas-current-route": "^3.0"
     }
 }
 ```
-After running: *sudo composer update* 
+After running: *composer update* 
 
 You need to register new module. Add in file **config/application.config.php**: 
 
@@ -24,9 +22,6 @@ You need to register new module. Add in file **config/application.config.php**:
     'CurrentRoute'
 ),
 ```
-
-*Note: if you want to use it in ZF2 app, add in composer.json version ^1.0*
-
 
 # Use
 Use this view helper in your view files(.html) including layout.phtml

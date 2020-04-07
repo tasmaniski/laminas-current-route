@@ -3,7 +3,7 @@
 namespace CurrentRoute\Factory\View\Helper;
 
 use Interop\Container\ContainerInterface;
-use Zend\Mvc\Router\Http\RouteMatch;
+use Laminas\Mvc\Router\Http\RouteMatch;
 use CurrentRoute\View\Helper\CurrentRoute;
 
 class CurrentRouteFactory
