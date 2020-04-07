@@ -1,9 +1,9 @@
 {
-    "name": "tasmaniski/zend-current-route",
+    "name": "tasmaniski/laminas-current-route",
     "description": "View Helper for reading current route info: Controller, Action, Module name",
     "type": "library",
     "keywords": [
-        "zend framework",
+        "laminas framework",
         "view",
         "helper",
         "route"
