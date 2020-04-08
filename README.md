@@ -1,13 +1,14 @@
+![Licence](https://img.shields.io/github/license/tasmaniski/laminas-current-route) 
+![PHP version](https://img.shields.io/packagist/php-v/tasmaniski/laminas-current-route)
+![StarsCount](https://img.shields.io/github/stars/tasmaniski/laminas-current-route)
+![Downloads](https://img.shields.io/packagist/dt/tasmaniski/laminas-current-route)
+
 ```json
 IMPORTANT NOTE: 
 If you find this package useful, 
 please click on a star button and let me know, 
 so I will gladly continue with the updates.
 ```
-
-[![Github All Releases](https://img.shields.io/github/stars/tasmaniski/laminas-current-route)]() [![Github All Releases](https://img.shields.io/github/license/tasmaniski/laminas-current-route)]()
-
-
 
 # Laminas MVC - Current Route Helper
 View Helper for reading **Controller, Module, Action and Route name** in any view(.phtml) file including layout.phtml
