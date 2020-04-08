@@ -1,3 +1,10 @@
+```json
+IMPORTANT NOTE: 
+If you find this package useful, 
+please click on a star button and let me know, 
+so I will gladly continue with the updates.
+```
+
 # Laminas MVC (Framework) Current Route Helper
 View Helper for reading **Controller, Module, Action and Route name** in any view(.phtml) file including layout.phtml
 
