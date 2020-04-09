@@ -8,6 +8,7 @@
         "helper",
         "route"
     ],
+    "license": "MIT",
     "homepage": "https://github.com/tasmaniski",
     "authors": [
         {
