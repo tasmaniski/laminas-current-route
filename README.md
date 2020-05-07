@@ -1,7 +1,5 @@
 ![Licence](https://img.shields.io/github/license/tasmaniski/laminas-current-route) 
 ![PHP version](https://img.shields.io/packagist/php-v/tasmaniski/laminas-current-route)
-![StarsCount](https://img.shields.io/github/stars/tasmaniski/laminas-current-route)
-![Downloads](https://img.shields.io/packagist/dt/tasmaniski/laminas-current-route)
 
 ```json
 IMPORTANT NOTE: 
