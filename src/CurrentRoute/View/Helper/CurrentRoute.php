@@ -22,8 +22,8 @@ class CurrentRoute extends AbstractHelper
      */
     public function __construct($controller, $action, $route, $module)
     {
-        $controller = explode('\\', strtolower($controller));
-        $module     = explode('\\', strtolower($module));
+        $controller = explode('\\', strtolower($controller ?? ''));
+        $module     = explode('\\', strtolower($module ?? ''));
 
         if($module[0] === '' && count($controller) === 3) {
             $module[0] = $controller[0];
